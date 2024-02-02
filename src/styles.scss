@@ -1,1 +1,105 @@
 /* You can add global styles to this file, and also import other style files */
+
+@use "shared";
+
+html, body { height: 100%; }
+body { margin: 0; padding: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
+
+h1,
+h2,
+h3,
+h4,
+.heading-1,
+.heading-2,
+.heading-3 {
+  font-family: 'Lilita One', sans-serif;
+}
+
+h1,
+.heading-1 {
+  font-weight: 300;
+  font-size: 6rem;
+
+  @include shared.screen('tablet-large') {
+    font-size: 8rem;
+  }
+}
+
+h2,
+.heading-2 {
+  font-size: 4rem;
+
+  @include shared.screen('tablet-large') {
+    font-size: 6rem;
+  }
+}
+
+h3,
+.heading-3 {
+  font-size: 2rem;
+
+  @include shared.screen('tablet-large') {
+    font-size: 4rem;
+  }
+}
+
+h4 {
+  font-size: 2rem;
+
+  @include shared.screen('tablet-large') {
+    font-size: 3.5rem;
+  }
+}
+
+p {
+  font-size: 1.5rem;
+
+  @include shared.screen('tablet-large') {
+    font-size: 2.5rem;
+  }
+
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style-type: none;
+  }
+}
+
+.container {
+  max-width: 2800px;
+  margin: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.cc {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: shared.$primary;
+}
+
+.color-primary {
+  color: shared.$primary;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}

@@ -1,0 +1,23 @@
+@use "sass:map";
+@use "theme";
+
+$primary: map.get(theme.$primary, 500);
+$accent: map.get(theme.$accent, 100);
+
+$breakpoints: (
+  'phone': 600px,
+  'tablet': 768px,
+  'tablet-large': 962px,
+  'desktop': 1200px,
+  'desktop-large': 1480px
+);
+
+@mixin screen($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "#{$breakpoint} doesn't exist";
+  }
+}

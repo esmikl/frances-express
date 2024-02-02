@@ -1,0 +1,108 @@
+@use "../../shared";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 64px);
+}
+
+.hero {
+  background-color: white;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+
+  img {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  @include shared.screen('tablet-large') {
+    min-height: 50%;
+  }
+}
+
+.mid-section {
+  display: flex;
+  flex-direction: column;
+  background-color: shared.$primary;
+  padding: 4rem;
+
+  @include shared.screen('tablet-large') {
+    padding: 8rem;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+  }
+
+  h2 {
+    text-align: center;
+    color: white;
+    margin-top: 0;
+  }
+
+  .cc-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    @include shared.screen('tablet-large') {
+      flex-direction: row;
+    }
+
+    img {
+      margin: 0 3rem 0 0;
+      max-width: initial;
+      width: 40%;
+    }
+
+    .heading-3 {
+      color: white;
+    }
+  }
+}
+
+.info-section {
+  padding: 4rem;
+  max-width: 1480px;
+  margin: auto;
+
+  @include shared.screen('tablet-large') {
+    padding: 8rem;
+  }
+}
+
+.services-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 4rem 0;
+
+  @include shared.screen('tablet-large') {
+    margin: 6rem 0;
+  }
+
+  li {
+    min-width: 33%;
+    text-align: center;
+    margin: 2rem;
+    text-transform: uppercase;
+    color: shared.$primary;
+    font-weight: 600;
+    font-size: 2.5rem;
+
+    @include shared.screen('tablet-large') {
+      font-size: 5rem;
+    }
+  }
+}
