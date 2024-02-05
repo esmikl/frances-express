@@ -22,7 +22,7 @@
     }
 
     function sendEmail($contactData) {
-        $message = 'Hello Curtie! Someone has submitted the contact form on curtiecares.org.' . "\r\n" . "\r\n" . 'Here are the details:' . "\r\n" . "\r\n";
+        $message = 'Hello Curtie! Someone has submitted the contact form on francesexpress.com.' . "\r\n" . "\r\n" . 'Here are the details:' . "\r\n" . "\r\n";
         $message .= 'Name: '.$contactData['name'].'' . "\r\n";
         $message .= 'Message: '.$contactData['message'].'' . "\r\n";
         
@@ -32,10 +32,10 @@
         
         $message .= 'Email: '.$contactData['email'].'' . "\r\n";
 
-        $to      = 'info@curtiecares.org';
+        $to      = 'esmikl@yahoo.com';
         $subject = 'Contact form submission from website';
-        $headers = 'From: info@curtiecares.org' . "\r\n" .
-            'Reply-To: info@curtiecares.org' . "\r\n" .
+        $headers = 'From: esmikl@yahoo.com' . "\r\n" .
+            'Reply-To: esmikl@yahoo.com' . "\r\n" .
             'X-Mailer: PHP/' . phpversion();
 
         mail($to, $subject, $message, $headers);
