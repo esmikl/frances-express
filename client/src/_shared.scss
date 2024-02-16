@@ -3,13 +3,16 @@
 
 $primary: map.get(theme.$primary, 500);
 $accent: map.get(theme.$accent, 100);
+$error: #f44336;
+$success: #64DD17;
 
 $breakpoints: (
   'phone': 600px,
   'tablet': 768px,
   'tablet-large': 962px,
   'desktop': 1200px,
-  'desktop-large': 1480px
+  'desktop-large': 1480px,
+  'jumbo-screen': 1960px
 );
 
 @mixin screen($breakpoint) {
