@@ -94,6 +94,11 @@
   @include shared.screen('tablet-large') {
     padding: 8rem;
   }
+
+  h2 {
+    max-width: 1300px;
+    margin: auto;
+  }
 }
 
 .services-list {
