@@ -8,8 +8,6 @@ import {MatInputModule} from "@angular/material/input";
 import {CommonModule} from "@angular/common";
 import {MatButtonModule} from "@angular/material/button";
 import {RouterLink} from "@angular/router";
-import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
-import {environment} from '../environments/environment';
 
 @Component({
   selector: 'app-contact',
@@ -39,8 +37,6 @@ export class ContactComponent {
   nameField = this.contactForm.get('name');
   messageField = this.contactForm.get('message');
   secondaryField = this.contactForm.get('secondary');
-
-  EMAIL_JS_API_KEY: environment.EMAILJS_API_KEY;
 
   constructor(private contactService: ContactService) { }
 
@@ -87,22 +83,5 @@ export class ContactComponent {
         });
       }
     }
-  }
-
-  public sendEmail(e: Event) {
-    e.preventDefault();
-
-    emailjs
-      .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target as HTMLFormElement, {
-        publicKey: 'YOUR_PUBLIC_KEY',
-      })
-      .then(
-        () => {
-          console.log('SUCCESS!');
-        },
-        (error) => {
-          console.log('FAILED...', (error as EmailJSResponseStatus).text);
-        },
-      );
   }
 }
