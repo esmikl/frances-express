@@ -126,3 +126,19 @@
     }
   }
 }
+
+.donate-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 20rem;
+
+    @include shared.screen('tablet') {
+      margin-left: 32px;
+      width: 25rem;
+    }
+  }
+}

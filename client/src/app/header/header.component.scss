@@ -22,6 +22,7 @@ nav {
 
     li {
       list-style-type: none;
+      margin: 0 4px;
 
       a {
         color: white;
@@ -65,5 +66,19 @@ nav {
 
   img {
     width: 100%;
+  }
+}
+
+.donate-link {
+  a {
+    background-color: white;
+    display: inline-flex;
+    align-items: center;
+    color: shared.$primary !important;
+
+    img {
+      width: 22px;
+      margin-right: 8px;
+    }
   }
 }
