@@ -142,3 +142,32 @@
     }
   }
 }
+
+.photos-section{
+  .row {
+    display: flex;
+    flex-direction: column;
+
+    @include shared.screen('desktop') {
+      flex-direction: row;
+    }
+  }
+
+  .photo-col {
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+
+    img {
+      width: 100%;
+    }
+
+    figcaption {
+      font-size: 2.5rem;
+
+      @include shared.screen('desktop-large') {
+        font-size: 3rem;
+      }
+    }
+  }
+}
