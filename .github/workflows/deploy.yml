@@ -13,6 +13,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4.1.1
 
+      # CD Into Client Folder
+      - name: Move into client folder
+        run: cd client
+
       # Setup Node
       - name: Setup Node
         uses: actions/setup-node@v4
