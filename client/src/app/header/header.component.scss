@@ -9,7 +9,6 @@ header {
 
 nav {
   display: flex;
-  flex-grow: 1;
   padding: 1rem;
   align-items: center;
   justify-content: flex-end;
@@ -29,7 +28,6 @@ nav {
         text-transform: uppercase;
         font-weight: 700;
         display: inline-flex;
-        flex-grow: 1;
         padding: 1rem;
         cursor: pointer;
         text-decoration: none;
@@ -80,5 +78,39 @@ nav {
       width: 22px;
       margin-right: 8px;
     }
+  }
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  margin-top: 6rem;
+
+  @include shared.screen('tablet') {
+    margin-top: 0;
+    width: 50%;
+    margin-left: auto;
+  }
+
+  @include shared.screen('tablet-large') {
+    flex-direction: row;
+    width: initial;
+    margin-left: initial;
+  }
+}
+
+.affiliate-links {
+  display: flex;
+
+  a {
+    display: flex;
+    padding: 1rem;
+  }
+
+  img {
+    height: 51px;
+    width: auto;
   }
 }
